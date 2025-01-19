@@ -22,7 +22,7 @@ function Basic() {
   // Обработчик отправки сообщения
   const handleSubmit = (evt) => {
     evt.preventDefault(); // Предотвращаем перезагрузку страницы при отправке формы
-    const name = "PractikumStudent"; // Имя пользователя
+    const name = "PractikumStudent1"; // Имя пользователя
     const request_temp = { sender: "user", sender_id: name, msg: inputMessage };
 
     if (inputMessage !== "") {
@@ -38,7 +38,7 @@ function Basic() {
 
   // Функция для отправки сообщения на сервер Rasa и получения ответа
   const rasaAPI = async function handleClick(name, msg) {
-    await fetch("http://localhost:5005/webhooks/rest/webhook", {
+    await fetch("http://51.250.32.198:5005/webhooks/rest/webhook", {
       method: "POST",
       headers: {
         Accept: "application/json",
